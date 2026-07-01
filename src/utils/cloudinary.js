@@ -19,7 +19,8 @@ const uplaoconCloudinary = async (localfilepath)=>{
     return responce
     
 } catch (error) {
-    
+    fs.unlinkSync(localfilepath)
+    return null
 }
 }
-
+export {uplaoconCloudinary}
